@@ -56,13 +56,15 @@
 		"README.md"
 	],
 	"scripts": {
-		"build": "tsdown",
+		"build": "node node_modules/tsdown/dist/run.mjs",
+		"lint": "node node_modules/oxlint/bin/oxlint src </dev/null",
 		"test": "bun test",
-		"check-types": "tsc --noEmit"
+		"check-types": "node node_modules/typescript/bin/tsc --noEmit"
 	},
 	"devDependencies": {
 		"@types/bun": "^1",
-		"tsdown": "^0.21.1",
+		"oxlint": "^1.70.0",
+		"tsdown": "^0.22.2",
 		"typescript": "^5"
 	}
 }
